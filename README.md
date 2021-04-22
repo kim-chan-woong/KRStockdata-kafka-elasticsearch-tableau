@@ -55,8 +55,10 @@ tableau - 무료 평가판
 
 ### Nifi 수집 및 적재   
 1. ConsumerKafka: 메시지를 실시간으로 읽어 들임   
-2. PutElasticsearchHttp: 실시간 json데이터를 elasticsearch의 지정한 index에 적재   
+2. PutElasticsearchHttp: 실시간 json데이터를 elasticsearch의 지정한 index에 적재(index: nifi-elk, type: json)   
 3. LogAttribute: 로그 확인   
 4. Queued: 모니터링   
 5. Processor 설정 별도 첨부   
 ![Screenshot_129](https://user-images.githubusercontent.com/66659846/115676148-4302bf80-a38a-11eb-89e1-ff752ea02a21.png)   
+
+### elasticsearch 적재 확인   
