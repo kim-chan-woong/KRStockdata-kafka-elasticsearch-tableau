@@ -50,7 +50,7 @@ tableau - 무료 평가판
 ### 카프카 메시지 수집 확인   
 1. Kafka Cluster는 총 3대의 서버로 구축(Kafka, Zookeeper)   
 2. 파이썬 코드 내 producer를 통해 메시지가 생성되고 consumer를 통한 수집 확인   
-![Screenshot_138](https://user-images.githubusercontent.com/66659846/115677401-65490d00-a38b-11eb-8ef5-2bd7ba51a856.png)   
+![Screenshot_139](https://user-images.githubusercontent.com/66659846/115677635-a5a88b00-a38b-11eb-8826-a0aa76009eea.png)   
 ![Screenshot_137 - 복사본](https://user-images.githubusercontent.com/66659846/115675963-1353b780-a38a-11eb-9ea2-73e3ec051d70.png)    
 
 ### Nifi 수집 및 적재   
