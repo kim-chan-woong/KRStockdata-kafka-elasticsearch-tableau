@@ -70,6 +70,8 @@ tableau - 무료 평가판
 4. Queued: 모니터링   
 5. Processor 설정 별도 첨부   
 ![Screenshot_129](https://user-images.githubusercontent.com/66659846/115676148-4302bf80-a38a-11eb-89e1-ff752ea02a21.png)   
+![Screenshot_155](https://user-images.githubusercontent.com/66659846/115687047-c0cbc880-a394-11eb-860f-528fde27a44f.png)   
+![Screenshot_156](https://user-images.githubusercontent.com/66659846/115687053-c1fcf580-a394-11eb-953e-940ec456973d.png)   
 
 ### elasticsearch cluster 상태 확인(elkmaster:9200, elkdn01:9200)   
 클러스터 이름: elktest
