@@ -35,7 +35,7 @@ tableau - 무료 평가판
 ### 서버 생성 및 MobaXterm 원격 작업   
 ![Screenshot_133](https://user-images.githubusercontent.com/66659846/115673671-dbe40b80-a387-11eb-8a87-6565bd767467.png)   
 
-### 실시간 데이터 생성 파일(.py) 실행   
+### 실시간 데이터 생성 파일(.py) 실행(getdataserver)   
 1. jupter notebook 테스트 후 리눅스 내 스크립트 형태로 실행   
 2. 앞서 언급했듯이, 실제 원천 데이터는 이미 정형화된 데이터지만 파이썬 코드로 실행함으로써,   
    초 단위로 데이터가 생성된다. 이 때의 데이터를 원천데이터로 가정한다.   
@@ -47,13 +47,13 @@ tableau - 무료 평가판
 7. 코드는 별도 첨부   
 ![Screenshot_127](https://user-images.githubusercontent.com/66659846/115673867-0c2baa00-a388-11eb-9713-223916207eee.png)   
 
-### 카프카 메시지 수집 확인   
+### 카프카 메시지 수집 확인(ka01, ka02, ka03)   
 1. Kafka Cluster는 총 3대의 서버로 구축(Kafka, Zookeeper)   
 2. 파이썬 코드 내 producer를 통해 메시지가 생성되고 consumer를 통한 수집 확인   
 ![Screenshot_139](https://user-images.githubusercontent.com/66659846/115677635-a5a88b00-a38b-11eb-8826-a0aa76009eea.png)   
 ![Screenshot_137 - 복사본](https://user-images.githubusercontent.com/66659846/115675963-1353b780-a38a-11eb-9ea2-73e3ec051d70.png)    
 
-### Nifi 수집 및 적재   
+### Nifi 수집 및 적재(rm01:18080)   
 1. ConsumerKafka: 메시지를 실시간으로 읽어 들임   
 2. PutElasticsearchHttp: 실시간 json데이터를 elasticsearch의 지정한 index에 적재(index: nifi-elk, type: json)   
 3. LogAttribute: 로그 확인   
@@ -61,4 +61,5 @@ tableau - 무료 평가판
 5. Processor 설정 별도 첨부   
 ![Screenshot_129](https://user-images.githubusercontent.com/66659846/115676148-4302bf80-a38a-11eb-89e1-ff752ea02a21.png)   
 
-### elasticsearch 적재 확인   
+### elasticsearch 적재 확인(elkmaster, elkdn01)   
+![Screenshot_140](https://user-images.githubusercontent.com/66659846/115678368-63337e00-a38c-11eb-98a5-3429c479663b.png)   
