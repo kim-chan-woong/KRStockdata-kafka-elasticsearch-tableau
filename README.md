@@ -68,5 +68,16 @@ tableau - 무료 평가판
 ### elasticsearch 적재 확인(elkmaster:9200, elkdn01:9200)   
 ![Screenshot_140](https://user-images.githubusercontent.com/66659846/115678368-63337e00-a38c-11eb-98a5-3429c479663b.png)   
 
+### elasticsearch 인덱스 정보 및 매핑 확인   
+index: nifi-elk   
+shard: 2   
+type: json   
+mapping:   
+![Screenshot_149](https://user-images.githubusercontent.com/66659846/115682014-06d25d80-a390-11eb-87b6-174e4078bb3b.png)   
+![Screenshot_145](https://user-images.githubusercontent.com/66659846/115682022-089c2100-a390-11eb-8ea1-0d01f6ad3031.png)   
+![Screenshot_146](https://user-images.githubusercontent.com/66659846/115682043-0c2fa800-a390-11eb-97ef-cc35840820a1.png)   
+![Screenshot_147](https://user-images.githubusercontent.com/66659846/115682056-0df96b80-a390-11eb-9d56-ff330eb2fc5a.png)   
+![Screenshot_148](https://user-images.githubusercontent.com/66659846/115682065-105bc580-a390-11eb-806d-9156f713aea0.png)   
+
 ### kibana를 통해 조건 검색(elkmaster:5601)   
 ![Screenshot_141](https://user-images.githubusercontent.com/66659846/115678710-c1f8f780-a38c-11eb-847c-378a07f0035b.png)   
