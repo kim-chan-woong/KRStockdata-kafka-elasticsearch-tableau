@@ -95,5 +95,6 @@ mapping:
 ### python을 통해 elasticsearch 데이터 로컬 저장(CSV, JSON)   
 ![Screenshot_143](https://user-images.githubusercontent.com/66659846/115684560-6c274e00-a392-11eb-9277-31d7a07dfc43.png)   
 ![Screenshot_144](https://user-images.githubusercontent.com/66659846/115684568-6d587b00-a392-11eb-8994-93443d45be20.png)   
+![Screenshot_153](https://user-images.githubusercontent.com/66659846/115684839-a690eb00-a392-11eb-87fa-01c30a068812.png)   
 
 ### 후 josn 데이터를 통해 tableau 시각화 // 최상단 결과 화면   
