@@ -65,7 +65,10 @@ tableau - 무료 평가판
 5. Processor 설정 별도 첨부   
 ![Screenshot_129](https://user-images.githubusercontent.com/66659846/115676148-4302bf80-a38a-11eb-89e1-ff752ea02a21.png)   
 
-### elasticsearch 적재 확인(elkmaster:9200, elkdn01:9200)   
+### elasticsearch cluster 확인(elkmaster:9200, elkdn01:9200)   
+![Screenshot_150](https://user-images.githubusercontent.com/66659846/115682484-75172000-a390-11eb-9397-0ef07a3a6bcb.png)   
+
+### elasticsearch 적재 확인   
 ![Screenshot_140](https://user-images.githubusercontent.com/66659846/115678368-63337e00-a38c-11eb-98a5-3429c479663b.png)   
 
 ### elasticsearch 인덱스 정보 및 매핑 확인   
