@@ -20,10 +20,14 @@ kafka와 elasticsearch를 통한 메시징 기반 실시간 수집 예제이며,
 Virtaul Box - 6.1   
 MobaXterm - 8.6   
 CentOS - 7   
+Java - 8   
 Python - 3.8.5   
 Nifi - 1.9.2   
-Kafka -   
+Kafka - 2.7.0   
 zookeeper - 3.4.10   
-elasticsearch   
-tableau   
-![Screenshot_131](https://user-images.githubusercontent.com/66659846/115671901-f5845380-a385-11eb-89c6-377e6b6a4f45.png)
+elasticsearch - 7.12.0   
+kibana - 6.2.1   
+tableau - 무료 평가판   
+![Screenshot_131](https://user-images.githubusercontent.com/66659846/115671901-f5845380-a385-11eb-89c6-377e6b6a4f45.png)   
+
+## 과정   
