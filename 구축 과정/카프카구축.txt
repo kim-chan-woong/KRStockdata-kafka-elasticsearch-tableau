@@ -1,0 +1,101 @@
+카프카 설치(서버 3대)
+[참조]
+http://blog.naver.com/PostView.nhn?blogId=hanajava&logNo=221581346202&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
+주키퍼 계정 생성 // 모든 서버
+adduser zookeeper
+passwd zookeeper
+su - zookeeper
+ssh
+
+주키퍼 설치 // 모든 서버
+wget https://archive.apache.org/dist/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
+
+압축 해제 // 모든 서버
+tar xvfz zookeeper
+
+zoo.cfg 수정 // 모든 서버
+/home/zookeeper/zookeeper-3.4.10/conf/zoo.cfg
+tickTime=2000
+initLimit=10
+syncLimit=5
+dataDir=/home/zookeeper/data
+clientPort=2181
+maxClientCnxns=0
+maxSessionTimeout=180000
+server.1=ka01:2888:3888
+server.2=ka02:2888:3888
+server.3=ka03:2888:3888
+
+data 폴더, myid 생성
+/home/zookeeper
+mkdir data
+cd data
+vi myid
+1,2,3
+
+카프카 계정 생성
+adduser kafka
+passwd kafka
+su - kafka
+ssh
+
+카프카 설치 // 모든 서버
+wget http://apache.mirror.cdnetworks.com/kafka/2.7.0/kafka_2.13-2.7.0.tgz
+
+압축 해제 // 모든 서버
+tar xvfz kafka
+
+카프카 이름 변경
+mv kafka... kafka
+
+카프카 설정 // 모든 서버
+vi $KAFKA_HOME/config/server.properties
+
+// 이 부분 서버마다 숫자 다르게
+broker.id=1
+listeners=PLAINTEXT://:9092
+// 이 부분 서버마다 숫자 다르게
+advertised.listeners=PLAINTEXT://ka01:9092
+zookeeper.connect=ka01:2181,ka02:2181,ka03:2181
+
+주키퍼 및 카프카 서버 시작  // 모든 서버
+카프카 백그라운드 실행 맨 뒤 & 붙이기
+$ZOOKEEPER_HOME ./bin/zkServer.sh start
+$KAFKA_HOME ./bin/kafka-server-start.sh ./config/server.properties &
+
+테스트
+토픽 생성
+$KAFKA_HOME ./bin/kafka-topics.sh --create --zookeeper ka01:2181, ka02:2181, ka03:2181 --replication-factor 3 --partitions 1 --topic GameLog
+$KAFKA_HOME ./bin/kafka-topics.sh --create --zookeeper ka01:2181, ka02:2181, ka03:2181 --replication-factor 3 --partitions 1 --topic GameLog2
+$KAFKA_HOME ./bin/kafka-topics.sh --create --zookeeper ka01:2181, ka02:2181, ka03:2181 --replication-factor 3 --partitions 1 --topic GameLog3
+
+토픽 리스트 확인
+$KAFKA_HOME ./bin/kafka-topics.sh --list --zookeeper ka01:2181, ka02:2181, ka03:2181
+
+토픽 상세 정보 확인
+$KAFKA_HOME ./bin/kafka-topics.sh --describe --zookeeper ka01:2181, ka02:2181, ka03:2181
+
+토픽 삭제
+$KAFKA_HOME ./bin/kafka-topics.sh --delete --zookeeper ka01:2181, ka02:2181, ka03:2181 --topic 토픽 이름
+삭제 오류 시
+https://jusunglee.tistory.com/entry/%ED%86%A0%ED%94%BD-%EC%82%AD%EC%A0%9C-Topic-delete
+
+프로듀서 메세지 생산
+$KAFKA_HOME ./bin/kafka-console-producer.sh --broker-list ka01:9092, ka02:9092, ka03:9092 --topic test
+
+컨슈머 메세지 소비
+$KAFKA_HOME ./bin/kafka-console-consumer.sh --bootstrap-server ka01:9092, ka02:9092, ka03:9092 --topic test --from-beginning
+./bin/kafka-console-consumer.sh --bootstrap-server ka01:9092, ka02:9092, ka03:9092 --group test_group --topic test --from-beginning
+
+카프카, 주키퍼 종료
+$ZOOKEEPER_HOME ./bin/zkServer.sh stop
+$KAFKA_HOME ./bin/kafka-server-stop.sh ./config/server.properties
+혹은 Ctrl +C
+
+delete.topic.enable=true
+
+구조 설명
+https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-topic-replication/
+
+파이썬 버전 변경
+https://cntechsystems.tistory.com/105
