@@ -9,6 +9,9 @@ kafka와 elasticsearch를 통한 메시징 기반 실시간 수집 예제이며,
 국내 시가총액 과거 데이터를 python을 통해 한 줄씩 읽어 들여 비정형(json) 데이터를 초 단위로 생성시켜   
 실시간으로 생성되는 데이터로 가정하였음을 알립니다.   
 
+## Dataset   
+https://financedata.github.io/marcap/   
+
 ## Process   
 1. Collection: 초 단위로 생성되는 데이터(json)를 kafka-python 모듈을 활용하여 producer 메시지 생산 후 전송   
                Nifi의 ConsumerKafka Processor를 통해 메시지 수집   
@@ -42,12 +45,15 @@ tableau - 무료 평가판
 3. 가정한 원천데이터는 1995-05-02 ~ 2020-12-31일 까지의 국내 시가총액 데이터 TOP 20이며,   
    정형화된 데이터를 한 행씩 읽어들여 json형식의 데이터(일별 시가총액 20위)를 생성한다.   
    이 때의 데이터를 실시간으로 생성되는 원천 데이터로 가정한다.   
-4. 총 데이터는 128,878행이고 컬럼은 16개이다.   
+4. 총 데이터는 128,878행이고 컬럼은 17개이다.   
+   Date : 날짜 (DatetimeIndex), Rank: 시가총액 순위 (당일), Code : 종목코드, Name : 종명이름, Open : 시가, High : 고가, Low : 저가
+   Close : 종가, Volume : 거래량, Amount : 거래대금, Changes : 전일대비, ChangeCode: 등락 기호, ChagesRatio : 전일대비 등락률, Marcap : 시가총액(백만원)
+   Stocks : 상장주식수, MarketId : 시장기호, Market : 시장, Dept : 부서(한국거래소)
 6. 실시간 데이터 생성 과정에서 주식 장이 열리지 않은 데이터는 제외하였다.(출력)   
 7. 파이썬 코드 내에 kafka-python 모듈을 활용하여 kafka producer로 메시지가 생성된다.   
 8. 전송 결과 초당 약 16건의 데이터를 처리하였다.   
 9. 코드는 별도 첨부   
-![Screenshot_142](https://user-images.githubusercontent.com/66659846/115679891-020caa00-a38e-11eb-905c-1aa34a54b06b.png)   
+![Screenshot_151](https://user-images.githubusercontent.com/66659846/115683215-2ddd5f00-a391-11eb-90fc-5681e1585279.png)    
 ![Screenshot_127](https://user-images.githubusercontent.com/66659846/115673867-0c2baa00-a388-11eb-9713-223916207eee.png)   
 ![Screenshot_128](https://user-images.githubusercontent.com/66659846/115680189-4ef08080-a38e-11eb-95cf-e9fce03a0d07.png)   
 
