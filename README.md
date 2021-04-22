@@ -93,7 +93,7 @@ mapping:
 ![Screenshot_141](https://user-images.githubusercontent.com/66659846/115678710-c1f8f780-a38c-11eb-847c-378a07f0035b.png)   
 
 ### python을 통해 elasticsearch 데이터 로컬 저장(CSV, JSON)   
-![Screenshot_143](https://user-images.githubusercontent.com/66659846/115684560-6c274e00-a392-11eb-9277-31d7a07dfc43.png)   
+![Screenshot_154](https://user-images.githubusercontent.com/66659846/115685286-0e473600-a393-11eb-93fa-0553259c1648.png)    
 ![Screenshot_144](https://user-images.githubusercontent.com/66659846/115684568-6d587b00-a392-11eb-8994-93443d45be20.png)   
 ![Screenshot_153](https://user-images.githubusercontent.com/66659846/115684839-a690eb00-a392-11eb-87fa-01c30a068812.png)   
 
