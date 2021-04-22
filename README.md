@@ -45,6 +45,7 @@ tableau - 무료 평가판
 5. 실시간 데이터 생성 과정에서 주식 장이 열리지 않은 데이터는 제외하였다.(출력)   
 6. 파이썬 코드 내에 kafka-python 모듈을 활용하여 kafka producer로 메시지가 생성된다.   
 7. 코드는 별도 첨부   
+![Screenshot_142](https://user-images.githubusercontent.com/66659846/115679891-020caa00-a38e-11eb-905c-1aa34a54b06b.png)   
 ![Screenshot_127](https://user-images.githubusercontent.com/66659846/115673867-0c2baa00-a388-11eb-9713-223916207eee.png)   
 
 ### 카프카 메시지 수집 확인(ka01, ka02, ka03)   
