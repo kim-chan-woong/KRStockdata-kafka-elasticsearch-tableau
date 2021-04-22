@@ -41,13 +41,14 @@ tableau - 무료 평가판
    초 단위로 데이터가 생성된다. 이 때의 데이터를 원천데이터로 가정한다.   
 3. 가정한 원천데이터는 1995-05-02 ~ 2020-12-31일 까지의 국내 시가총액 데이터 TOP 20이며,   
    정형화된 데이터를 한 행씩 읽어들여 json형식의 데이터(일별 시가총액 20위)를 생성한다.   
-   이 때의 데이터를 실시간으로 생성되는 원천 데이터로 가정한다.
+   이 때의 데이터를 실시간으로 생성되는 원천 데이터로 가정한다.   
 4. 총 데이터는 128,878행이다.   
 5. 실시간 데이터 생성 과정에서 주식 장이 열리지 않은 데이터는 제외하였다.(출력)   
 6. 파이썬 코드 내에 kafka-python 모듈을 활용하여 kafka producer로 메시지가 생성된다.   
 7. 코드는 별도 첨부   
 ![Screenshot_142](https://user-images.githubusercontent.com/66659846/115679891-020caa00-a38e-11eb-905c-1aa34a54b06b.png)   
 ![Screenshot_127](https://user-images.githubusercontent.com/66659846/115673867-0c2baa00-a388-11eb-9713-223916207eee.png)   
+![Screenshot_128](https://user-images.githubusercontent.com/66659846/115680189-4ef08080-a38e-11eb-95cf-e9fce03a0d07.png)   
 
 ### 카프카 메시지 수집 확인(ka01, ka02, ka03)   
 1. Kafka Cluster는 총 3대의 서버로 구축(Kafka, Zookeeper)   
