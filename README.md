@@ -16,4 +16,14 @@ kafka와 elasticsearch를 통한 메시징 기반 실시간 수집 예제이며,
 3. Visualization: elasticsearch에 적재된 데이터를 tableau를 통해 시각화   
 ![Screenshot_130](https://user-images.githubusercontent.com/66659846/115668980-bb658280-a382-11eb-95bb-ae4054421af6.png)   
 
-## Servers    
+## Servers, spec   
+Virtaul Box - 6.1   
+MobaXterm - 8.6   
+CentOS - 7   
+Python - 3.8.5   
+Nifi - 1.9.2   
+Kafka -   
+zookeeper - 3.4.10   
+elasticsearch   
+tableau   
+![Screenshot_131](https://user-images.githubusercontent.com/66659846/115671901-f5845380-a385-11eb-89c6-377e6b6a4f45.png)
