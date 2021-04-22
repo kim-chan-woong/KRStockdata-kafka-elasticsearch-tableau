@@ -46,3 +46,8 @@ tableau - 무료 평가판
 6. 파이썬 코드 내에 kafka-python 모듈을 활용하여 kafka producer로 메시지가 생성된다.   
 7. 코드는 별도 첨부   
 ![Screenshot_127](https://user-images.githubusercontent.com/66659846/115673867-0c2baa00-a388-11eb-9713-223916207eee.png)   
+
+### 카프카 메시지 수집 확인   
+1. Kafka Cluster는 총 3대의 서버로 구축(Kafka, Zookeeper)   
+2. 파이썬 코드 내 producer를 통해 메시지가 생성되고 consumer를 통한 수집 확인   
+![Screenshot_134](https://user-images.githubusercontent.com/66659846/115675263-65e0a400-a389-11eb-992b-9043bb0e1a2e.png)   
