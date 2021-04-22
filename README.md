@@ -53,7 +53,7 @@ tableau - 무료 평가판
 7. 파이썬 코드 내에 kafka-python 모듈을 활용하여 kafka producer로 메시지가 생성된다.   
 8. 전송 결과 초당 약 16건의 데이터를 처리하였다.   
 9. 코드는 별도 첨부   
-![Screenshot_151](https://user-images.githubusercontent.com/66659846/115683215-2ddd5f00-a391-11eb-90fc-5681e1585279.png)    
+![Screenshot_142](https://user-images.githubusercontent.com/66659846/115679891-020caa00-a38e-11eb-905c-1aa34a54b06b.png)   
 ![Screenshot_127](https://user-images.githubusercontent.com/66659846/115673867-0c2baa00-a388-11eb-9713-223916207eee.png)   
 ![Screenshot_128](https://user-images.githubusercontent.com/66659846/115680189-4ef08080-a38e-11eb-95cf-e9fce03a0d07.png)   
 
