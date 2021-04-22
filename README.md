@@ -31,3 +31,6 @@ tableau - 무료 평가판
 ![Screenshot_131](https://user-images.githubusercontent.com/66659846/115671901-f5845380-a385-11eb-89c6-377e6b6a4f45.png)   
 
 ## 과정   
+
+### 서버 생성 및 MobaXterm 원격 작업   
+![Screenshot_132](https://user-images.githubusercontent.com/66659846/115673461-9de6e780-a387-11eb-9e4b-b4cb1d1055db.png)   
