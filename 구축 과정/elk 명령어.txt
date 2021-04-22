@@ -1,0 +1,88 @@
+구축 과정
+[참조]
+https://goddaehee.tistory.com/87
+https://goddaehee.tistory.com/87
+https://goddaehee.tistory.com/86
+
+systemctl start elasticsearch
+systemctl start kibana
+systemctl start metricbeat
+systemctl start filebeat
+
+인덱스 생성
+curl -XPUT [호스트네임]:9200/[인덱스이름]?pretty
+ex) curl -XPUT elkmaster:9200/test?pretty
+curl -XPUT elkmaster:9200/test?pretty
+
+인덱스 조회
+curl -XGET [호스트네임]:9200/[인덱스이름]?pretty
+ex) curl -XGET elkmaster:9200/test?pretty
+
+전체 인덱스 조회
+curl -XGET 'elkmaster:9200/_cat/indices?v'
+
+인덱스 삭제
+curl -XDELETE elkmaster:9200/nifi-elk?pretty
+
+PUT nifi-elk
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 2,
+      "number_of_replicas": 1
+    }
+  }
+}
+
+클러스터 상태 확인
+curl -XGET '192.168.56.130:9200/_cat/health?v&pretty'
+총 128,878행
+'1995-05-02', '2020-12-31'
+https://velog.io/@yundleyundle/ElasticSearch-Document-API-%EC%83%89%EC%9D%B8-%EC%A1%B0%ED%9A%8C-%EC%82%AD%EC%A0%9C
+POST http://192.168.56.130:9200/nifi-elk/_search \
+{ \
+    "query":{ \
+        "match_all":{} \
+    } \
+}
+
+특정 인덱스의 전체 document 개수
+GET nifi-elk/_search?track_total_hits=true
+
+GET nifi-elk/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "_source": ["Name", "Marcap"],
+  "from": 0,
+  "size": 100
+}
+
+GET /_search?track_total_hits=true
+{
+  "query": {
+    "range": {
+      "Date": {
+        "gte": "2000-01-01",
+        "lte": "2020-12-31",
+        "boost": 2.0
+      }
+    }
+  }
+}
+GET /_search?track_total_hits=true
+{
+  "query": {
+    "range": {
+      "Date": {
+        "gte": "2020-01-01",
+        "lte": "2020-12-31",
+        "boost": 2.0
+      }
+    }
+  },
+  "_source": ["Code","Name", "Marcap","Rank","Date"]
+}
+
+1995 3940
