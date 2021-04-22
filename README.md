@@ -91,3 +91,9 @@ mapping:
 
 ### kibana를 통해 조건 검색(elkmaster:5601)   
 ![Screenshot_141](https://user-images.githubusercontent.com/66659846/115678710-c1f8f780-a38c-11eb-847c-378a07f0035b.png)   
+
+### python을 통해 elasticsearch 데이터 로컬 저장(CSV, JSON)   
+![Screenshot_143](https://user-images.githubusercontent.com/66659846/115684560-6c274e00-a392-11eb-9277-31d7a07dfc43.png)   
+![Screenshot_144](https://user-images.githubusercontent.com/66659846/115684568-6d587b00-a392-11eb-8994-93443d45be20.png)   
+
+### 후 josn 데이터를 통해 tableau 시각화 // 최상단 결과 화면   
